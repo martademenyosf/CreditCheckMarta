@@ -1,0 +1,22 @@
+<!--
+ - Created by user on 21.10.2019.
+ -->
+
+<aura:component description="CreateCase"
+                implements="lightning:actionOverride,force:lightningQuickAction,force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId, force:hasSObjectName"
+>
+    <lightning:workspaceAPI aura:id="workspace" />
+    <aura:attribute name="tabId" type="String" />
+    <lightning:navigation aura:id="navService"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:registerEvent name="createRecord" type="force:createRecord" />
+
+    <!-- test test
+    <div class="slds-form-element">
+        <span class="rightMargin slds-float_left">
+            <lightning:button label="Create New Case" iconName="utility:new"  iconPosition="left" onclick="{!c.createCase}"/>
+        </span>
+    </div>
+-->
+</aura:component>
