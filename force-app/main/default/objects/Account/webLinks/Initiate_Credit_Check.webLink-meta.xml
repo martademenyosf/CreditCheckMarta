@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initiate_Credit_Check</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Initiate Credit Check</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT (&quot;/soap/ajax/13.0/connection.js&quot;)} 
+var selected = {!GETRECORDIDS($ObjectType.Account)}; 
+if (selected[0] == null) { 
+    alert(&quot;Please select at least one Account.&quot;)
+} else {
+     window.location = &#39;apex/MyPage&#39;;
+}</url>
+</WebLink>

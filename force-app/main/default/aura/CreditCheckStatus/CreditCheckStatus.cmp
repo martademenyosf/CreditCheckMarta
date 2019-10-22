@@ -1,0 +1,13 @@
+<!--
+ - Created by user on 21.10.2019.
+ -->
+
+<aura:component controller="ProductInUse" Implements="flexipage:availableForAllPageTypes,force:lightningQuickAction,force:hasRecordId,force:appHostable" access="global">
+    <aura:attribute name="recordId"
+                    type="String"
+                    description="ID of the record."/>
+
+    <aura:handler name="init"
+                  value="this"
+                  action="{!c.doInit}"/>
+</aura:component>

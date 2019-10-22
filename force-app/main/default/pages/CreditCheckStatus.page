@@ -1,0 +1,24 @@
+<!--
+ - Created by user on 22.10.2019.
+ -->
+
+    <apex:page id="CreditCheckStatus" showHeader="false" sidebar="false" docType="html-5.0" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+        <html>
+        <head>
+            <apex:includelightning />
+            <title>Credit check status</title>
+        </head>
+        </html>
+        <body>
+        <div id="lightning">
+        </div>
+        </body>
+        <script type="text/javascript">
+            var recordId = "{!JSENCODE($CurrentPage.parameters.recordId)}";
+            $Lightning.use("DDH:CreditCheckStatus",function(){
+                $Lightning.createComponent("DDH:CreditCheckStatus",{"recordId" : recordId },"lightning",function(cmp){
+                    console.log("DDH:CreditCheckStatus is created. cmp is : %O",cmp);
+                });
+            });
+        </script>
+    </apex:page>

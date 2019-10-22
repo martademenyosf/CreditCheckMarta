@@ -6,7 +6,7 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>CaseController</apexClass>
+        <apexClass>ProductInUSe</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>
@@ -33,11 +33,19 @@
     <layoutAssignments>
         <layout>CaseClose-Close Case Layout</layout>
     </layoutAssignments>
+    <pageAccesses>
+        <apexPage>CreditCheckStatus</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>Case.Credit_Check</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
+    <tabVisibilities>
+        <tab>Credit_Check_Status</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
